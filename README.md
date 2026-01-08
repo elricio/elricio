@@ -49,7 +49,7 @@ I specialize in building **high-performance, scalable web applications**. With o
 
 ### 📫 Connect with me
 <p align="left">
-<a href="mailto:bit@cryptolab.net"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="mailto:elricli.dev@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
 <!--<a href="你的LinkedIn链接"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" /></a>
 <a href="你的推特链接"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white" /></a>
   -->
