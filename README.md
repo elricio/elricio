@@ -1,23 +1,4 @@
-<div align="center">
-
-# 👋 Hi there, I'm Elric
-
-### **Senior Front-end Architect | Design System Enthusiast | Performance Geek**
-
-<a href="https://github.com/elricio">
-  <img src="https://komarev.com/ghpvc/?username=elricio&label=Profile%20Views&color=212121&style=flat-square" alt="elricio" />
-</a>
-
-<br />
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=elricio&theme=calm&border_radius=8&card_width=480)](https://git.io/streak-stats)
-
-<br />
-
-[![Elric's GitHub Stats](https://github-readme-stats.vercel.app/api?username=elricio&show_icons=true&theme=calm&hide_border=true&title_color=3382ed&icon_color=3382ed&bg_color=0d1117&border_radius=8)](https://github.com/anuraghazra/github-readme-stats)
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=elricio&layout=compact&theme=calm&hide_border=true&title_color=3382ed&bg_color=0d1117&border_radius=8&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
-
-</div>
+![Metrics](https://github.com/elricio/elricio/blob/main/github-metrics.svg)
 
 ---
 
