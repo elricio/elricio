@@ -52,9 +52,3 @@ jobs:
 
           # 4. 其它细节补充 (如果你需要左侧的详细行数统计)
           plugin_lines: yes
-          plugin_introduction: yes
-          plugin_introduction_title: yes
-          
-          # 5. Star 数统计 (如果你需要)
-          plugin_stars: yes
-          plugin_stars_limit: 4
