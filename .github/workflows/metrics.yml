@@ -43,12 +43,9 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          plugin_languages_details: lines, percentage
+          # plugin_languages_details: lines, percentage
 
           # 3. 获得的成就 (Achievements)
           plugin_achievements: yes
           plugin_achievements_display: compact
           plugin_achievements_threshold: C
-
-          # 4. 其它细节补充 (如果你需要左侧的详细行数统计)
-          plugin_lines: yes
