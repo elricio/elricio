@@ -31,13 +31,16 @@ I specialize in building **high-performance, scalable web applications**. With o
 
 ---
 
-### 🛠️ My Technical Arsenal
+### 🛠️ Tech Stack
 
-| Core Ecosystem | UI & Styling | Engineering & Tooling |
+<div align="center">
+
+| Frontend Frameworks | Languages & Tools | Testing & DevOps |
 | :--- | :--- | :--- |
-| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=flat-square) ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white&style=flat-square) | ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square) | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square) |
-| ![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?logo=vue.js&logoColor=white&style=flat-square) ![Ecosystem](https://img.shields.io/badge/-State%20Management-FF4088?style=flat-square) | ![Styled Components](https://img.shields.io/badge/-Styled--Components-DB7093?logo=styled-components&logoColor=white&style=flat-square) | ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat-square) |
-| ![WASM](https://img.shields.io/badge/-WebAssembly-654FF0?logo=webassembly&logoColor=white&style=flat-square) | ![Framer Motion](https://img.shields.io/badge/-Framer%20Motion-0055FF?logo=framer&logoColor=white&style=flat-square) | ![Testing](https://img.shields.io/badge/-Vitest%20%7C%20Cypress-6E9911?style=flat-square) |
+| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=flat-square) ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white&style=flat-square) ![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?logo=vue.js&logoColor=white&style=flat-square) | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square) ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat-square) ![Rust](https://img.shields.io/badge/-Rust-000000?logo=rust&logoColor=white&style=flat-square) | ![Vitest](https://img.shields.io/badge/-Vitest-6E9911?logo=vitest&logoColor=white&style=flat-square) ![Cypress](https://img.shields.io/badge/-Cypress-172048?logo=cypress&logoColor=white&style=flat-square) |
+| ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square) ![Styled Components](https://img.shields.io/badge/-Styled--Components-DB7093?logo=styled-components&logoColor=white&style=flat-square) | ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat-square) ![Turbopack](https://img.shields.io/badge/-Turbopack-000000?logo=webpack&logoColor=white&style=flat-square) | ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat-square) ![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white&style=flat-square) |
+
+</div>
 
 ---
 
@@ -66,47 +69,6 @@ I specialize in building **high-performance, scalable web applications**. With o
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/wakatime?username=elricio&layout=compact&theme=calm&hide_border=true&title_color=3382ed&bg_color=0d1117&border_radius=8" alt="WakaTime Stats" width="100%" />
-</div>
-
----
-
-### 🛠️ Technical Arsenal
-
-<div align="center">
-
-```typescript
-// Core Stack
-const frontend = {
-  frameworks: ["React", "Next.js", "Vue", "SvelteKit"],
-  languages: ["TypeScript", "Rust", "Go"],
-  state: ["Zustand", "Redux Toolkit", "TanStack Query"],
-  styling: ["TailwindCSS", "Styled Components", "Emotion"]
-};
-
-// Engineering
-const engineering = {
-  bundlers: ["Vite", "Turbopack", "Webpack"],
-  testing: ["Vitest", "Cypress", "Playwright"],
-  ci_cd: ["GitHub Actions", "Docker", "Vercel"],
-  design_systems: ["Storybook", "Radix", "Headless UI"]
-};
-```
-
-</div>
-
-<br />
-
-<div align="center">
-
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=flat-square)
-![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white&style=flat-square)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square)
-![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?logo=vue.js&logoColor=white&style=flat-square)
-![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat-square)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat-square)
-![Rust](https://img.shields.io/badge/-Rust-000000?logo=rust&logoColor=white&style=flat-square)
-
 </div>
 
 ---
