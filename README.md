@@ -1,4 +1,4 @@
-![Metrics](https://github.com/elricio/elricio/blob/main/github-metrics.svg)
+![Metrics](/github-metrics.svg)
 
 ---
 
