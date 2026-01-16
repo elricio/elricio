@@ -5,7 +5,7 @@ on:
   # 允许手动触发
   workflow_dispatch:
   # 当 master/main 分支有 push 时触发 (可选)
-  push: {branches: ["master", "main"]}
+  # push: {branches: ["master", "main"]}
 
 jobs:
   github-metrics:
