@@ -6,13 +6,14 @@ export const alt = 'GEEK-RESUME - 高性能动态简历系统'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-// 预加载字体
+// 使用系统字体，避免网络请求失败（国内无法访问 Google Fonts）
+// 使用 Buffer 直接嵌入字体数据
 const fontMono = fetch(
-  new URL('https://fonts.gstatic.com/s/spacemono/v10/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2'),
+  new URL('https://github.com/google/fonts/raw/main/apache/spacemono/SpaceMono-Regular.ttf'),
 ).then((res) => res.arrayBuffer())
 
 const fontDisplay = fetch(
-  new URL('https://fonts.gstatic.com/s/spacegrotesk/v16/gyBhwie-09M3-Cw0U32QvGQ.woff2'),
+  new URL('https://github.com/google/fonts/raw/main/apache/spacegrotesk/SpaceGrotesk-Bold.ttf'),
 ).then((res) => res.arrayBuffer())
 
 export default async function Image() {
