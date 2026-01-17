@@ -1,62 +1,81 @@
-# Dependencies
+# 依赖目录
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+.pnpm-store/
 
-# Environment variables
+# 包管理器锁定文件
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 构建输出
+.next/
+dist/
+out/
+build/
+
+# 环境变量
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
 
-# IDE
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 运行时数据
+.DS_Store
+Thumbs.db
+
+# 测试相关
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+playwright/.cache/
+playwright/.config/
+vitest.config.ts.timestamp-*
+
+# 编辑器/IDE
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
+# TypeScript 编译输出
+*.tsbuildinfo
+
+# Next.js 特定
+.next/cache/
+
+# Biome 缓存
+.biome/
+
+# 开发工具缓存
+.turbo/
+
+# 操作系统文件
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Logs
-*.log
-logs/
-*.log.*
-
-# Temporary files
+# 临时文件
+tmp/
+temp/
 *.tmp
 *.temp
 
-# Claude
+# 调试文件
+debug.log
+
+# Claude 缓存
 .claude/settings.local.json
-
-# Build outputs
-dist/
-build/
-out/
-coverage/
-
-# Cache
-.cache/
-.nyc_output/
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-venv/
-env/
-.venv/
-
-# Generated files (keep the main SVG)
-# github-metrics.svg  # Uncomment if you want to ignore generated SVGs
