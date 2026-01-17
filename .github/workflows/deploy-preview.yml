@@ -1,0 +1,160 @@
+name: Deploy Preview (resume)
+
+on:
+  push:
+    branches: [resume]
+  workflow_dispatch:
+
+env:
+  NEXT_TURBOPACK: '1'
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run lint and type check
+        run: pnpm check
+
+      - name: Run unit tests
+        run: pnpm test
+
+      - name: Build project
+        run: pnpm build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output-resume
+          path: |
+            .next/
+            !.next/cache/
+          retention-days: 1
+
+  e2e-tests:
+    runs-on: ubuntu-latest
+    needs: test-and-build
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: pnpm playwright install --with-deps ${{ matrix.browser }}
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output-resume
+          path: .next/
+
+      - name: Run E2E tests
+        run: pnpm playwright test --project=${{ matrix.browser }}
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-resume
+          path: playwright-report/
+          retention-days: 7
+
+  deploy-preview:
+    runs-on: ubuntu-latest
+    needs: [test-and-build, e2e-tests]
+    if: success()
+    environment: preview
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build project
+        run: pnpm build
+
+      - name: Deploy to Vercel Preview
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prebuilt'
+          working-directory: ./
+          github-deployment-environment: preview
+
+      - name: Comment PR with Preview URL
+        uses: actions/github-script@v7
+        if: github.event_name == 'push'
+        with:
+          script: |
+            const url = process.env.VERCEL_URL;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🚀 **Preview Deployed!**\n\n🔗 **URL**: https://${url}\n\n✅ All tests passed\n✅ Build successful\n✅ Ready for review`
+            })
+
+  post-deploy:
+    runs-on: ubuntu-latest
+    needs: deploy-preview
+    if: success()
+    steps:
+      - name: Run smoke tests on preview
+        run: |
+          sleep 10
+          curl -f https://${{ env.VERCEL_URL }}/ || exit 1
+          curl -f https://${{ env.VERCEL_URL }}/resume/edit || exit 1
+
+      - name: Notify deployment status
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
