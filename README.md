@@ -36,10 +36,10 @@ I specialize in building **high-performance, scalable web applications**. With o
 ### 📫 Connect & Collaboration
 
 <div align="center">
-  <a href="mailto:elricli.dev@gmail.com">
+  <a href="mailto:me@elric.li">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <a href="https://x.com/li_each">
+  <a href="https://x.com/elric_io">
     <img src="https://img.shields.io/badge/x-1DA1F2?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" />
   </a>
 </div>
